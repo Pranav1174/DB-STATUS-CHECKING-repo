@@ -1,3 +1,156 @@
-{
-    "status": "running"
-}
+[
+    {
+        "timestamp": "2024-08-26T14:15:47.358728",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T14:15:47.376298",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T14:20:01.731698",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T14:20:01.741657",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T14:25:02.018300",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T14:25:02.027861",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T14:30:01.306324",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T14:30:01.316334",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T14:35:01.596861",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T14:35:01.606155",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T14:40:01.881453",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T14:40:01.891733",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T14:45:02.162977",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T14:45:02.172404",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T14:50:00.853687",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T14:50:00.864057",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T14:55:02.142674",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T14:55:02.152457",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T15:00:01.425253",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T15:00:01.435341",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T15:05:01.705669",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T15:05:01.715767",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T15:10:01.987444",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T15:10:01.997180",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T15:15:01.270063",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T15:15:01.279618",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T15:20:01.551654",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T15:20:01.561111",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T15:25:01.854830",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T15:25:01.863693",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T15:30:02.137171",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T15:30:02.147721",
+        "error": null,
+        "color_code": "#28a745"
+    },
+    {
+        "timestamp": "2024-08-26T15:35:01.572447",
+        "status": "running",
+        "startup_status": "unknown",
+        "db_mode": "read/write",
+        "last_query_time": "2024-08-26T15:35:01.584921",
+        "error": null,
+        "color_code": "#28a745"
+    }
+]
+    
