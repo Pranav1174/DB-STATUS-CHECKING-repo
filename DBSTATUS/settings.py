@@ -130,4 +130,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRONJOBS = [
     ('*/5 * * * *', 'django.core.management.call_command', ['check_db_status']),
+     ('0 0 1 */3 *', 'django.core.management.call_command', ['cleanup_logs']),
 ]
