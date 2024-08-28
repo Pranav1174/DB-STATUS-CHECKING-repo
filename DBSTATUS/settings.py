@@ -24,8 +24,13 @@ SECRET_KEY = 'django-insecure-02w4lsx(#8@w0ki0bc$2=og3!iw_92xi69nwc-twwmm$co5whk
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    '847e-2403-a080-1c-b673-376a-a07e-51cc-2f18.ngrok-free.app',
+    'localhost:3000',
+]
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '499b-103-170-54-161.ngrok-free.app']
 
 
 
@@ -40,9 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'monitor',
     'django_crontab',
+     'corsheaders',
+    
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -131,4 +139,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRONJOBS = [
     ('*/5 * * * *', 'django.core.management.call_command', ['check_db_status']),
      ('0 0 1 */3 *', 'django.core.management.call_command', ['cleanup_logs']),
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'https://847e-2403-a080-1c-b673-376a-a07e-51cc-2f18.ngrok-free.app',
+]
+CORS_ALLOW_HEADERS = [
+    'Authorization',
+    'Content-Type',
+    'X-Custom-Header',
+    'ngrok-skip-browser-warning',
 ]
