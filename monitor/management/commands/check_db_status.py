@@ -1,4 +1,3 @@
-
 import json
 import os
 from datetime import datetime
@@ -29,6 +28,7 @@ class Command(BaseCommand):
 
             # Additional checks
             status['db_mode'] = self.check_db_mode()
+            status['startup_status'] = 'success'
 
         except Exception as e:
             # Handle any exceptions and record the error message
@@ -36,9 +36,6 @@ class Command(BaseCommand):
             status['error'] = str(e)
             status['startup_status'] = 'failed'
             status['color_code'] = '#dc3545'  # Red for error
-
-        # Add the current date and time
-        status['timestamp'] = datetime.now().isoformat()
 
         # Determine the path to the JSON file
         json_file_path = os.path.join(os.path.dirname(__file__), '../../db_status.json')
@@ -70,7 +67,6 @@ class Command(BaseCommand):
 
     def check_db_mode(self):
         # Example function to determine read/write status
-        # This is a placeholder and should be replaced with actual logic
         try:
             with connection.cursor() as cursor:
                 cursor.execute("SELECT pg_is_in_recovery()")
