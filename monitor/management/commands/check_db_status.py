@@ -37,7 +37,6 @@ class Command(BaseCommand):
 
         json_file_path = os.path.join(os.path.dirname(__file__), '../../db_status.json')
 
-        # Ensure that the directory exists and create it if necessary
         os.makedirs(os.path.dirname(json_file_path), exist_ok=True)
 
         data = []
