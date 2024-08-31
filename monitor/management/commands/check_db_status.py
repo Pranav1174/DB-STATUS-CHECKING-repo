@@ -19,31 +19,27 @@ class Command(BaseCommand):
         }
 
         try:
-            # Attempt a simple query to check database connectivity
+        
             with connection.cursor() as cursor:
                 cursor.execute("SELECT 1")
                 status['status'] = 'running'
                 status['last_query_time'] = datetime.now().isoformat()
                 status['color_code'] = '#28a745'  # Green for running
 
-            # Additional checks
             status['db_mode'] = self.check_db_mode()
             status['startup_status'] = 'success'
 
         except Exception as e:
-            # Handle any exceptions and record the error message
             status['status'] = 'error'
             status['error'] = str(e)
             status['startup_status'] = 'failed'
             status['color_code'] = '#dc3545'  # Red for error
 
-        # Determine the path to the JSON file
         json_file_path = os.path.join(os.path.dirname(__file__), '../../db_status.json')
 
         # Ensure that the directory exists and create it if necessary
         os.makedirs(os.path.dirname(json_file_path), exist_ok=True)
 
-        # Read existing data from the JSON file if it exists
         data = []
         if os.path.exists(json_file_path):
             with open(json_file_path, 'r') as json_file:
@@ -54,10 +50,8 @@ class Command(BaseCommand):
                 except json.JSONDecodeError:
                     data = []
 
-        # Append the new status with timestamp and color code
         data.append(status)
 
-        # Write the updated data back to the JSON file
         try:
             with open(json_file_path, 'w') as json_file:
                 json.dump(data, json_file, indent=4)
@@ -66,7 +60,6 @@ class Command(BaseCommand):
             self.stdout.write(self.style.ERROR(f'Failed to write to {json_file_path}: {e}'))
 
     def check_db_mode(self):
-        # Example function to determine read/write status
         try:
             with connection.cursor() as cursor:
                 cursor.execute("SELECT pg_is_in_recovery()")
