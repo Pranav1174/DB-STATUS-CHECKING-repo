@@ -12,7 +12,7 @@ class Command(BaseCommand):
         now = datetime.now()
         three_months_ago = now - retention_period
 
-        # Determine the path to the JSON file
+        
         json_file_path = os.path.join(os.path.dirname(__file__), '../../db_status.json')
 
         if not os.path.exists(json_file_path):
@@ -27,7 +27,6 @@ class Command(BaseCommand):
                     self.stdout.write(self.style.WARNING('Invalid data format in db_status.json'))
                     return
 
-            # Filter out log entries older than 3 months
             filtered_data = []
             for entry in data:
                 try:
@@ -39,7 +38,6 @@ class Command(BaseCommand):
                 except ValueError:
                     self.stdout.write(self.style.WARNING(f'Invalid timestamp format in entry: {entry}'))
 
-            # Write the filtered data back to the JSON file
             with open(json_file_path, 'w') as json_file:
                 json.dump(filtered_data, json_file, indent=4)
 
