@@ -20,7 +20,6 @@ class Command(BaseCommand):
             return
 
         try:
-            # Load the existing data from the JSON file
             with open(json_file_path, 'r') as json_file:
                 data = json.load(json_file)
                 if not isinstance(data, list):
